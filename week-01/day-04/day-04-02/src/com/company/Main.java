@@ -1,0 +1,11 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+	System.out.println("All the King's horses and all the King's men");
+	System.out.println("Humpty Dumpty ha a great fall.");
+	System.out.println("Humpty Dumpty sat on a wall.");
+	System.out.println("Couldn't put Humpty together again.");
+    }
+}
