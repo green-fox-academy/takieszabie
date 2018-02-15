@@ -1,8 +1,11 @@
 public class excercise5 {
     public static void main (String [] args) {
-        System.out.println(13 + 22);
-        System.out.println(22 - 13);
-        System.out.println(22 * 13);
-        System.out.println(22 / 13);
-        System.out.println(22 % 13);}
+        int firstNumber = 13;
+        int secondNumber = 22;
+
+        System.out.println(firstNumber + secondNumber);
+        System.out.println(secondNumber - firstNumber);
+        System.out.println(secondNumber * firstNumber);
+        System.out.println(secondNumber / firstNumber);
+        System.out.println(secondNumber % firstNumber);}
 }
