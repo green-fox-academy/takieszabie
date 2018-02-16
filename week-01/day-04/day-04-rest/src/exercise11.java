@@ -48,5 +48,25 @@ public class exercise11 {
 
         System.out.println(eleven);
 
+        int i1 = 10;
+        int i2 =3;
+        boolean and = ((i2 * i2) < i1 && (i2 * i2 * i2) > i1 );
+
+        System.out.println(and);
+
+        int j = 1521;
+        int j2 = 3;
+        int j3 = 5;
+
+        boolean dividable = (((j % j2) == 0) || ((j % j3) == 0));
+
+        System.out.println(dividable);
+
+        String k = "Apple";
+        for(int k2 = 0 ; k2 < 4; k2++) {
+            System.out.println(k);
+
+        }
+
     }
 }
