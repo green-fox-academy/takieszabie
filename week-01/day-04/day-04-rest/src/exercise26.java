@@ -13,14 +13,13 @@ public class exercise26 {
         Scanner input2 = new Scanner(System.in);
         int secondNumber = input.nextInt();
 
-        boolean bigger = secondNumber > firstNumber;
+        boolean bigger = secondNumber < firstNumber;
 
-        if (bigger == false) {
-            System.out.println("Second number should be bigger than first number!");}
-            else {
+            if (bigger == true) {
+                System.out.println("Second number should be bigger than first number!");
+            } else {
                 for (int a = firstNumber; a < secondNumber; a++) {
-                System.out.println(a);
+                    System.out.println(a); }
             }
         }
     }
-}
