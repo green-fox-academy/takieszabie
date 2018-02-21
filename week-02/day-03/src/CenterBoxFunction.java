@@ -6,19 +6,23 @@
 
 import javax.swing.*;
 import java.awt.*;
+
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class CenterBoxFunction {
 
     public static void mainDraw(Graphics graphics){
-        int squareSize = 50;
-        drawsquare(squareSize, graphics);
+        int squareSizing = 50;
+        drawsquare(squareSizing, graphics);
     }
 
     private static void drawsquare(int size, Graphics graphics) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 1; i < 4; i++) {
+            int adjSize = size*i;
+            int positionX = (WIDTH / 2 - adjSize/2);
+            int positionY = (HEIGHT / 2 - adjSize/2);
             graphics.setColor(Color.GREEN);
-            graphics.drawRect((WIDTH-(size/2)), (HEIGHT-(size/2)), (size+i*10), (size+i*10));
+            graphics.drawRect(positionX, positionY, adjSize, adjSize);
         }
     }
 
