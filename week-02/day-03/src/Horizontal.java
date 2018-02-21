@@ -1,32 +1,28 @@
 // Create a line drawing function that takes 2 parameters:
 // The x and y coordinates of the line's starting point
-// and draws a line from that point to the center of the canvas.
+// and draws a 50 long horizontal line from that point.
 // Draw 3 lines with that function. Use loop for that.
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Random;
+import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class GoToCenter {
-
+public class Horizontal {
     public static void mainDraw(Graphics graphics) {
 
-        int min = 1;
-        int max = 20;
+        int startX = 200;
+        int startY = 100;
+        int numberOfRounds = 3;
 
-        int x = 1;
-        int y = 2;
-        int i = 3;
+        drawline(startX, startY, numberOfRounds, graphics);
 
-        drawline(x,y, graphics, i);
     }
 
-    private static void drawline(int x, int y, Graphics graphics, int i) {
-        for (int j = 0; j < i ; j++) {
-            Random randomNum = new Random();
+    private static void drawline(int pointX, int pointY, int rounds, Graphics graphics) {
+        for (int i = 0; i < rounds; i++) {
             graphics.setColor(Color.RED);
-            graphics.drawLine((WIDTH / 2), (HEIGHT / 2), (x+randomNum.nextInt()), (y+randomNum.nextInt()));
+            graphics.drawLine(pointX, pointY+10*i, (pointX+50), pointY+10*i);
         }
     }
 
