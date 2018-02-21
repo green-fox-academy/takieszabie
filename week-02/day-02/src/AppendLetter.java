@@ -10,7 +10,7 @@ public class AppendLetter{
         System.out.println(appendA(far));
     }
     public static List<String> appendA(List<String> toBeAppended) {
-        
+
 
     }
 }
