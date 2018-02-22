@@ -12,11 +12,16 @@ public class QuoteSwap{
     public static void main(String... args){
         ArrayList<String> list = new ArrayList<String>(Arrays.asList("What", "I", "do", "create,", "I", "cannot", "not", "understand."));
         System.out.println("Original version: " + list);
-        System.out.println("Updated version: " + quoteSwap(list));
+        quoteSwap(list);
     }
 
-    private static String quoteSwap(ArrayList<String> toBeReSequenced) {
+    private static void quoteSwap(ArrayList<String> toBeReSequenced) {
+        int numberOfRound = toBeReSequenced.size();
         Collections.swap(toBeReSequenced, 2, 5);
-        return toBeReSequenced.toString();
+        String result = "";
+        for (int i = 0; i < numberOfRound; i++) {
+                result += (toBeReSequenced.get(i) + " ");
             }
+        System.out.println(result);
         }
+    }
