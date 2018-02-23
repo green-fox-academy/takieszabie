@@ -8,8 +8,6 @@ public class StudentCounter {
     public static void main(String... args) {
         ArrayList<Map<String, Object>> map = new ArrayList<Map<String, Object>>();
 
-        // Given this list of hashmaps...
-
         Map<String, Object> row0 = new HashMap<String, Object>();
         row0.put("name", "Rezso");
         row0.put("age", 9.5);
@@ -52,23 +50,18 @@ public class StudentCounter {
                 System.out.println(map.get(i).get("name"));
             }
         }
-        ArrayList<Object> summer = new ArrayList<>();
+        ArrayList<String> summerAsString = new ArrayList<>();
         for (int i = 0; i < map.size(); i++) {
             int value = (int) map.get(i).get("candies");
             if (value < 5) {
-                summer.add(map.get(i).get("age"));
+                summerAsString.add(map.get(i).get("age").toString());
             }
-        }
-        System.out.println("As objects " + summer);
-        ArrayList<String> summerAsString = new ArrayList<>();
-        for (int i = 0; i < summer.size(); i++) {
-            summerAsString.add(summer.get(i).toString());
         }
         System.out.println("As Strings " + summerAsString);
         double summmmmer = 0;
         for (int i = 0; i < summerAsString.size(); i++) {
             summmmmer = summmmmer + Double.parseDouble(summerAsString.get(i));
         }
-        System.out.println(summmmmer);
+        System.out.println("Sum= " + summmmmer);
         }
     }
