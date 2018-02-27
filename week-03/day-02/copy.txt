@@ -1,0 +1,7 @@
+giraffe
+cat
+dog
+pig
+penguin
+45
+elephant
