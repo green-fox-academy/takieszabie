@@ -37,4 +37,10 @@ public class Dice {
     dices[k] = (int) (Math.random() * 6) + 1;
   }
 
+  @Override
+  public String toString() {
+    return "Dice{" +
+            "dices=" + Arrays.toString(dices) +
+            '}';
+  }
 }
