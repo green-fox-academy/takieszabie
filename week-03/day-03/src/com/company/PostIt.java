@@ -5,27 +5,10 @@ import java.awt.*;
 public class PostIt {
   public static void main(String[] args) {
 
-    PostItThings postIt1 = new PostItThings();
-    postIt1.backgroundColor = Color.orange;
-    postIt1.textColor = Color.blue;
-    postIt1.textOnIt = "Idea 1";
+    PostItThing postIt1 = new PostItThing(Color.orange, Color.blue, "Idea 1");
 
-    PostItThings postIt2 = new PostItThings();
-    postIt1.backgroundColor = Color.pink;
-    postIt1.textColor = Color.black;
-    postIt1.textOnIt = "Awesome";
+    PostItThing postIt2 = new PostItThing(Color.pink, Color.black, "Awesome");
 
-    PostItThings postIt3 = new PostItThings();
-    postIt1.backgroundColor = Color.yellow;
-    postIt1.textColor = Color.green;
-    postIt1.textOnIt = "Superb!";
+    PostItThing postIt3 = new PostItThing(Color.yellow, Color.green, "Superb!");
   }
-}
-
-class PostItThings {
-
-  Color backgroundColor;
-  Color textColor;
-  String textOnIt;
-
 }
