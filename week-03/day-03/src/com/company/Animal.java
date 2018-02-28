@@ -13,8 +13,8 @@ public class Animal {
   private int thirst;
 
   public Animal() {
-    hunger = 50;
-    thirst = 50;
+    this.hunger = 50;
+    this.thirst = 50;
   }
 
   public void eat () {
@@ -37,13 +37,4 @@ public class Animal {
     thirst++;
     hunger++;
   }
-
-  public int getHunger() {
-    return hunger;
-  }
-
-  public int getThirst() {
-    return thirst;
-  }
-
 }
