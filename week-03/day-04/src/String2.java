@@ -1,8 +1,8 @@
-public class String1 {
+public class String2 {
   public static void main(String[] args) {
     String toBeModified = "xenophxxxxxxxxxxobiaxenopheal";
     char from = 'x';
-    char to = 'y';
+    char to = 0;
     System.out.println(modifier(toBeModified, from, to));
   }
 
