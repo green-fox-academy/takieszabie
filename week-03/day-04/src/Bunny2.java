@@ -5,7 +5,7 @@
 
 public class Bunny2 {
   public static void main(String[] args) {
-    int numberOfBunnies2 = 11;
+    int numberOfBunnies2 = 5;
     System.out.println(oddEarCounter(numberOfBunnies2));
   }
 

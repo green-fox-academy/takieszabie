@@ -1,0 +1,15 @@
+public class String1 {
+  public static void main(String[] args) {
+    String toBeModified = "xenophxxxxxxxxxxobiaxenopheal";
+    char from = 'x';
+    char to = 'y';
+    System.out.println(modifier(toBeModified, from, to));
+  }
+
+  private static String modifier(String toBeModified, char from, char to) {
+    if (toBeModified.length()<1 ) {
+      return toBeModified;
+    }char first = from == toBeModified.charAt(0) ? to : toBeModified.charAt(0);
+    return first + modifier(toBeModified.substring(1), from, to);
+  }
+}
