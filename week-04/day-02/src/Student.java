@@ -14,8 +14,6 @@ public class Student extends Person {
     this.previousOrganization = previousOrganization;
     this.skippedDays = skippedDays;
   }
-
-
   public void introduce() {
     System.out.println("Hi, I'm " + getName() + ", a " + getAge() + " year old " + getGender() + " from "
             + previousOrganization + " who skipped " + skippedDays + "days from the course already.");

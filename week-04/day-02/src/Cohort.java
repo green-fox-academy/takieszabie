@@ -9,15 +9,12 @@ public class Cohort {
   public Cohort(String name) {
     this.name = name;
   }
-
   public void setStudents(ArrayList<Student> students) {
     this.students = students;
   }
-
   public void setMentors(ArrayList<Mentor> mentors) {
     this.mentors = mentors;
   }
-
   public void info() {
     System.out.println("The " + name + " cohort has" + students.size () + " students and " + mentors.size() +
             " mentors.");
