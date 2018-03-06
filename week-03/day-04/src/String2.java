@@ -3,7 +3,6 @@ public class String2 {
     String toBeModified = "xenophxxxxxxxxxxobiaxenopheal";
     char from = 'x';
     char to = 0;
-    System.out.println(modifier(toBeModified, from, to));
     System.out.println(modifier2(toBeModified, from, to));
   }
 
