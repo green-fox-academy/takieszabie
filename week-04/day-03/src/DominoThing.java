@@ -17,14 +17,14 @@ public class DominoThing implements Comparable<DominoThing> {
 
   @Override
   public int compareTo(DominoThing o) {
-    if (this.values[0] < o.values[0]) {
+    if (values[0] < o.values[0]) {
       return -1;
-    } else if (this.values[0] > o.values[0]) {
+    } else if (values[0] > o.values[0]) {
       return 1;
     } else {
-      if(this.values[1] < o.values[1]) {
+      if(values[1] < o.values[1]) {
         return -1;
-      } else if (this.values[1] > o.values[1]) {
+      } else if (values[1] > o.values[1]) {
         return 1;
       } else return 0;
     }

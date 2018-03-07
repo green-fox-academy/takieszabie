@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class FleetOfThings {
   public static void main(String[] args) {
     Fleet fleet = new Fleet();
@@ -21,5 +25,16 @@ public class FleetOfThings {
     thing4.complete();
 
     System.out.println(fleet);
+    List<String> fleetAsString = new ArrayList<>();
+    fleetAsString.add(thing1.toString());
+    fleetAsString.add(thing2.toString());
+    fleetAsString.add(thing3.toString());
+    fleetAsString.add(thing4.toString());
+    sortFleet(fleetAsString);
+    System.out.println(fleetAsString);
+  }
+
+  private static void sortFleet(List a) {
+    Collections.sort(a);
   }
 }

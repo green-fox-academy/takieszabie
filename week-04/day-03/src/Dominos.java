@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Dominos implements Comparable<DominoThing> {
+public class Dominos {
   public static void main(String[] args) {
     List<DominoThing> dominoes = initializeDominoes();
     // You have the list of Dominoes
@@ -40,10 +40,5 @@ public class Dominos implements Comparable<DominoThing> {
     dominoes.add(new DominoThing(2, 4));
     dominoes.add(new DominoThing(7, 1));
     return dominoes;
-  }
-
-  @Override
-  public int compareTo(DominoThing o) {
-    return 0;
   }
 }
