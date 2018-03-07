@@ -73,7 +73,7 @@ public class Plants extends GardenMain{
   public void waterer(int water){
     int divider = TreeList.size() + FlowerList.size();
     int dividedWater = water/divider;
-    flowerWaterer(dividedWater);
-    Trees.treeWaterer(dividedWater);
+    //flowerWaterer(dividedWater);
+    //Trees.treeWaterer(dividedWater);
   }
 }

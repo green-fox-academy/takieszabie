@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class GreenFox {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws CloneNotSupportedException {
     ArrayList<Person> people = new ArrayList<>();
 
     Person mark = new Person("Mark", 46, "male");
@@ -42,6 +42,8 @@ public class GreenFox {
     awesome.addMentor(mentor);
     awesome.addMentor(gandhi);
     awesome.info();
+    Student Szabolcs = (Student) john.clone();
+    Szabolcs.introduce();
 
   }
 }
