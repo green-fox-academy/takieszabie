@@ -22,8 +22,11 @@ public class DominoThing implements Comparable<DominoThing> {
     } else if (this.values[0] > o.values[0]) {
       return 1;
     } else {
-      //you can check more fields -> new if-elseif-else; if the above is not enough f.e. numbers are equal
-      return 0;
+      if(this.values[1] < o.values[1]) {
+        return -1;
+      } else if (this.values[1] > o.values[1]) {
+        return 1;
+      } else return 0;
     }
   }
 }
