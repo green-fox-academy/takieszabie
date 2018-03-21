@@ -59,15 +59,15 @@ public class Pirate {
       }
   }
 
-  public void brawl(Pirate pirate1, Pirate pirate2) {
+  public void brawl(Pirate pirate2) {
     Random rand = new Random();
     int brawlDecider = rand.nextInt(3) + 1;
     if (brawlDecider == 1) {
-      pirate1.die();
+      die();
     } else if (brawlDecider == 2) {
       pirate2.die();
     } else {
-      pirate1.die();
+      die();
       pirate2.die();
     }
   }
