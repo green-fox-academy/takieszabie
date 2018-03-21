@@ -8,5 +8,11 @@ public class BattleApp {
     santaMaria.fillShip(santaMaria);
     blackPearl.fillShip(blackPearl);
     System.out.println(santaMaria.battle(blackPearl));
+    for (int i = 0; i < santaMaria.crew.size(); i++) {
+      System.out.println(santaMaria.crew.get(i).toString());
+    }
+    for (int i = 0; i < blackPearl.crew.size(); i++) {
+      System.out.println(blackPearl.crew.get(i).toString());
+    }
   }
 }

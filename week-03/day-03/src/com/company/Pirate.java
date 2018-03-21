@@ -35,20 +35,17 @@ public class Pirate {
     isPassedOut = passedOut;
   }
 
-  public void setAlive(boolean alive) {
-    isAlive = alive;
-  }
-
   public void drinkSomeRum(Pirate pirate1) {
     pirate1.hadRums++;
+    System.out.println(pirate1.name + "had rum");
   }
 
   public void die() {
-    setAlive(false);
+    isAlive = false;
   }
 
   public void howsItGoingMate(Pirate pirate1) {
-    if (isAlive == false) {
+    if (!isAlive) {
       System.out.println(pirate1.name + " is dead!");
     } else {
       if (hadRums > 0) {
@@ -73,5 +70,15 @@ public class Pirate {
       pirate1.die();
       pirate2.die();
     }
+  }
+
+  @Override
+  public String toString() {
+    return "Pirate{" +
+            "name='" + name + '\'' +
+            ", hadRums=" + hadRums +
+            ", isAlive=" + isAlive +
+            ", isPassedOut=" + isPassedOut +
+            '}';
   }
 }
