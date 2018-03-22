@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +15,10 @@ public class Carrier {
 
   public void add(Aircraft aircraft1) {
     aircraftStore.add(aircraft1);
+  }
+
+  public int getHealthPoints() {
+    return healthPoints;
   }
 
   public void fill() {
@@ -51,5 +56,17 @@ public class Carrier {
     }
     this.healthPoints = this.healthPoints - attackedTotalDamage;
     carrier1.healthPoints = carrier1.healthPoints - attackerTotalDamage;
+  }
+
+  public void printStatus() {
+    int totalDamage = 0;
+    for (int i = 0; i < this.aircraftStore.size(); i++) {
+      totalDamage = totalDamage + this.aircraftStore.get(i).getAmmoNumber()*this.aircraftStore.get(i).getBaseDamage();
+    }
+    System.out.println("HP: " + healthPoints + "Aircraft count: " + aircraftStore.size() + "Ammo storage: " + ammoStore + "Total damage: " + totalDamage +
+            "Aircrafts:");
+    for (int i = 0; i < this.aircraftStore.size() ; i++) {
+      System.out.println(this.aircraftStore.get(i).printStatus());
+    }
   }
 }
