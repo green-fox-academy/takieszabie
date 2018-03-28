@@ -6,7 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileOperations {
-  public List<String> getFileContentAsList(String fileName) {
+
+  public List<String> getFileContent(String fileName) {
     List<String> linesOfFile = new ArrayList<>();
     try {
       Path filePath = Paths.get(fileName);
@@ -15,5 +16,15 @@ public class FileOperations {
       e1.printStackTrace();
     }
     return linesOfFile;
+  }
+
+  public void writeFile (String fileName, List<String> fileContent) {
+    try {
+      Path filePath = Paths.get(fileName);
+      Files.delete(filePath);
+      Files.write(filePath, fileContent);
+    } catch (IOException e){
+      e.printStackTrace();
+    }
   }
 }

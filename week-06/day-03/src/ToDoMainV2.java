@@ -10,7 +10,7 @@ public class ToDoMainV2 {
     } else if (newArgHandler.isList()) {
       toDoHandler.printToDoS();
     } else if (newArgHandler.isAdd()) {
-      System.out.println("ez lesz a hozzaadas");
+      toDoHandler.addToDo();
     } else if (newArgHandler.isRemove()) {
       System.out.println("ez lesz a torles");
     } else if (newArgHandler.isComplete()) {
