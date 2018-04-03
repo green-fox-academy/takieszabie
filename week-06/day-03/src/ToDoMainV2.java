@@ -3,7 +3,7 @@ public class ToDoMainV2 {
   public static void main(String[] args) {
     ArgumentHandler newArgHandler = new ArgumentHandler(args);
     Helpprinter newHelpPrinter = new Helpprinter();
-    ToDo toDoHandler = new ToDo();
+    ToDoList toDoHandler = new ToDoList();
 
     if (newArgHandler.noArgs()) {
       newHelpPrinter.print();

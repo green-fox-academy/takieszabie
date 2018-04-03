@@ -1,26 +1,24 @@
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 
-import static java.time.LocalDateTime.now;
+public class ToDo{
 
-public class ToDo {
-  private static final String CHECKED_BOX = " [X] ";
-  private static final String UNCHECKED_BOX = " [ ] ";
-  private static String FILE_PATH = "..//data.txt";
   private String title;
-  private static int idBase = 1;
+  private static final AtomicInteger count = new AtomicInteger(1);
   private int id;
   private LocalDateTime createdAt;
   private LocalDateTime completedAt;
   private boolean isCompleted;
 
-  private List<ToDo> toDoList = new ArrayList<>();
+  public ToDo(String title) {
+    this.title = title;
+    id = count.incrementAndGet();
+    this.createdAt = LocalDateTime.now();
+  }
 
   public ToDo() {
     this.title = title;
-    this.id = id;
+    id = count.incrementAndGet();
     this.createdAt = createdAt;
     this.completedAt = completedAt;
     this.isCompleted = isCompleted;
@@ -42,43 +40,9 @@ public class ToDo {
     return completedAt;
   }
 
-  public boolean isCompleted() {
+  public boolean getIsCompleted() {
     return isCompleted;
   }
 
-  public ToDo(String title) {
-    this.title = title;
-    this.id = idBase++;
-    this.createdAt = now();
-  }
 
-  FileOperations fileOperator = new FileOperations();
-
-  public void printToDoS() {
-    List<String> toBePrintedAsString = fileOperator.getFileContent(FILE_PATH);
-    List<ToDo> toBePrintedAsToDo = new ArrayList<>();
-    if (toBePrintedAsString.size() < 1) {
-      System.out.println("No ToDo's for today! :)");
-    } else {
-      for (int i = 0; i < toBePrintedAsString.size(); i++) {
-        String[] linesSeparated = toBePrintedAsString.get(i).split("///");
-        toBePrintedAsToDo.add(new ToDo(linesSeparated[1]));
-      }
-    }
-  }
-
-  public void addToDo() {
-    Scanner toDoFromUser = new Scanner(System.in);
-    String newToDo = toDoFromUser.nextLine();
-    ToDo addedToDo = new ToDo(newToDo);
-    String fileInsert = addedToDo.getId() + "///";
-    if (addedToDo.isCompleted) {
-      fileInsert = fileInsert + CHECKED_BOX + "///";
-    } else {
-      fileInsert = fileInsert + UNCHECKED_BOX + "///";
-    } fileInsert = fileInsert + newToDo + "///" + getCreatedAt();
-    List<String> fileContentText = new ArrayList<>();
-    fileContentText.add(fileInsert);
-    fileOperator.writeFile(FILE_PATH, fileContentText);
-  }
 }
