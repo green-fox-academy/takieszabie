@@ -20,7 +20,6 @@ public class BankHTMLController {
   public String showString(Model model) {
     model.addAttribute("balanceis", namedSimba.getBalance());
     model.addAttribute("htmlCodeGiven", htmlCode);
-
     return "bankofsimba";
   }
 }
