@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
 </head>
 <body>
-
+<td>Zebra <span th:text="${#numbers.formatDecimal(balanceis, 0, 'COMMA', 2, 'POINT')}">10.00</span></td>
+<p th:text="'Hello, the balance is: ' + ${balanceis} + '.' "/>
 </body>
 </html>
