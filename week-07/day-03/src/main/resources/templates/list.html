@@ -1,4 +1,4 @@
-<div th:if="${not #lists.isEmpty(accounts)}">
+<div th:if="${not #lists.isEmpty(accounts)}" xmlns:th="http://www.w3.org/1999/xhtml">
     <h2>Counts List</h2>
     <table class="table table-striped">
         <tr>
@@ -6,6 +6,7 @@
             <th>Name</th>
             <th>Balance</th>
             <th>Type of the animal</th>
+            <th>King?</th>
 
         </tr>
         <tr th:each="account : ${accounts}">
@@ -13,6 +14,8 @@
             <td th:text="${account.name}"></td>
             <td th:text="${account.balance}"></td>
             <td th:text="${account.animalType}"></td>
+            <td th:text="${account.isKing}"></td>
+
         </tr>
     </table>
 </div>

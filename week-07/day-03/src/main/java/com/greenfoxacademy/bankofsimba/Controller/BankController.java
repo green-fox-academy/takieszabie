@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BankController {
-  BankAccount namedSimba = new BankAccount("Simba", 2000, "lion");
+  BankAccount namedSimba = new BankAccount("Simba", 2000, "lion", true);
 
   @RequestMapping("/show")
   public String showDetails() {

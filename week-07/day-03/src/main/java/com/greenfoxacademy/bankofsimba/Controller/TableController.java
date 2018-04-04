@@ -12,9 +12,17 @@ import java.util.List;
 @Controller
 public class TableController {
 
+
+  List<BankAccount> newLionList = new ArrayList<>(Arrays.asList(
+          new BankAccount("Timon", 1000, "Szurikata", false),
+          new BankAccount("Pumba", 2000, "Boar", false),
+          new BankAccount("Mufasa", 3000, "Lion", true),
+          new BankAccount("Nala", 4000, "Lion", false),
+          new BankAccount("Zordon", 5000, "Lion", true)
+  ));
   @RequestMapping("/list")
   public String listAccounts(Model model) {
-    model.addAttribute("accounts", AccountService.listAll());
+    model.addAttribute("accounts", newLionList);
     return "list";
   }
 }

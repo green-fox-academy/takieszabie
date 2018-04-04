@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class BankHTMLController {
-  BankAccount namedSimba = new BankAccount("Simba", 2000, "lion");
+  BankAccount namedSimba = new BankAccount("Simba", 2000, "lion", true);
   String htmlCode = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
 
   @RequestMapping("/show2")
