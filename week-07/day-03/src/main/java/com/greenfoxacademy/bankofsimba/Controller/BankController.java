@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BankController {
+  BankAccount namedSimba = new BankAccount("Simba", 2000, "lion");
 
   @RequestMapping("/show")
   public String showDetails() {
-    BankAccount namedSimba = new BankAccount("Simba", 2000, "lion");
     return namedSimba.getName()+namedSimba.getBalance()+namedSimba.getAnimalType();
   }
 }

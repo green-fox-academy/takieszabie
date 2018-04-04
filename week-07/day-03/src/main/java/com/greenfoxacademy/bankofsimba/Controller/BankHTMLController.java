@@ -7,11 +7,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class BankHTMLController {
+  BankAccount namedSimba = new BankAccount("Simba", 2000, "lion");
+  String htmlCode = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
 
   @RequestMapping("/show2")
   public String showDetails(Model model) {
-    BankAccount namedSimba = new BankAccount("Simba", 2000, "lion");
     model.addAttribute("balanceis", namedSimba.getBalance());
+    return "bankofsimba";
+  }
+
+  @RequestMapping("/show3")
+  public String showString(Model model) {
+    model.addAttribute("balanceis", namedSimba.getBalance());
+    model.addAttribute("htmlCodeGiven", htmlCode);
+
     return "bankofsimba";
   }
 }
