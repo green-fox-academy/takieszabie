@@ -2,12 +2,14 @@
     <h2>Counts List</h2>
     <table class="table table-striped">
         <tr>
+            <th>Nr</th>
             <th>Name</th>
             <th>Balance</th>
             <th>Type of the animal</th>
 
         </tr>
         <tr th:each="account : ${accounts}">
+            <td th:text="${accountStat.count}"></td>
             <td th:text="${account.name}"></td>
             <td th:text="${account.balance}"></td>
             <td th:text="${account.animalType}"></td>
