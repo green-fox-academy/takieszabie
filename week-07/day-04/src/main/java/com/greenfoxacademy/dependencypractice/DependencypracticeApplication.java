@@ -11,6 +11,9 @@ public class DependencypracticeApplication implements CommandLineRunner {
 	@Autowired
 	Printer printer;
 
+	@Autowired
+	MyColor myColor;
+
 	public static void main(String[] args) {
 		SpringApplication.run(DependencypracticeApplication.class, args);
 	}
@@ -18,5 +21,7 @@ public class DependencypracticeApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		printer.log("hello");
+		myColor.printColor();
+		printer.log(myColor.printColor());
 	}
 }
