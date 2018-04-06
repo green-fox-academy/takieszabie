@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<h1>Welcome to Programmer Fox Club</h1></br>
+
+Please provide a name so you can associate it to your pet!</br>
+</br>
+
+<form action="#" th:action="@{/login}" method="post">
+    <label for="username">Name:</label>
+    <input type="text" id="username" name="username" />
+    <input type="submit" value="GO!" />
+</form>
+</body>
+</html>
