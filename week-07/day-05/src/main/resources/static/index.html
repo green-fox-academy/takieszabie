@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<a href="http://www.yahoo.com">- Information</a>
+<p th:text="${name}"/>
+
+
+
+<img th:src="@{/greenfox.png}">
+</br>
+This is Mr Fox Currently living on pizza and lemonade. He knows 2 tricks.
+</br>
+<h1>Known tricks</h1>
+
+<ul>
+    <li>write code in html</li>
+    <li>code in Java</li>
+</ul>
+
+</body>
+</html>
