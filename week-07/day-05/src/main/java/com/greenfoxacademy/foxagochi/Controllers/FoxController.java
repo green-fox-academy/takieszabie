@@ -18,15 +18,8 @@ public class FoxController {
   }
 
   @PostMapping("/login")
-  public String loginParam(@RequestParam(name = "username") String username, Model model) {
-    model.addAttribute("name", username);
-
-    return "login";
-  }
-
-  @GetMapping("/loggedin")
-  public String loggedinParam(@RequestParam("name") String username, Model model) {
+  public String loggedinParam(@RequestParam("username") String username, Model model) {
     model.addAttribute("username", username);
-    return "loggedin";
+    return "redirect:/?name=" + username;
   }
 }
