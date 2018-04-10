@@ -1,0 +1,19 @@
+<div th:if="${not #lists.isEmpty(accounts)}" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h2>Counts List</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Urgent?</th>
+            <th>Done?</th>
+
+        </tr>
+        <tr th:each="todo : ${todos}">
+            <td th:text="${account.id}"></td>
+            <td th:text="${account.title}"></td>
+            <td th:text="${account.urgent}"></td>
+            <td th:text="${account.done}"></td>
+
+        </tr>
+    </table>
+</div>

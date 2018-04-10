@@ -12,7 +12,11 @@ public class GameLogicTest {
   public void compareHighestCards_Test() {
     String hands = "Black: 2H 3D 5S 9C KD White: 2C 3H 4S 8C AH";
     GameLogic.parseHand(hands);
-    Assert.assertEquals(GameLogic.compareHighestCards(), "white");
+
+    String expectedWinner = GameLogic.compareHighestCards();
+
+    Assert.assertEquals(expectedWinner, "white");
+    
   }
 
   @Test
@@ -28,5 +32,5 @@ public class GameLogicTest {
     GameLogic.parseHand(hands);
     Assert.assertEquals(GameLogic.whitePairValue(), 2);
   }
-  
+
 }
