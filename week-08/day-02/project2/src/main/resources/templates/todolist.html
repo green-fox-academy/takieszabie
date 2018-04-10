@@ -8,9 +8,21 @@
 <body>
 <h1>ToDos for today!</h1>
 
-<ul>
-    <li th:each="task:${todos}" th:text="${task}"></li>
-</ul>
+    <table class="table table-striped">
+        <tr>
+            <th>Nr</th>
+            <th>ToDo</th>
+            <th>Urgent?</th>
+            <th>Done?</th>
+
+        </tr>
+        <tr th:each="todo : ${todos}">
+            <td th:text="${todo.getId()}"></td>
+            <td th:text="${todo.getTitle()}"></td>
+            <td th:text="${todo.isUrgent()}"></td>
+            <td th:text="${todo.isDone()}"></td>
+
+        </tr>
 
 </body>
 </html>
