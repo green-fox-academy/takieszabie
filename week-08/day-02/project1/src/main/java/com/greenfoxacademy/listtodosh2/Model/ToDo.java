@@ -1,11 +1,17 @@
 package com.greenfoxacademy.listtodosh2.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class ToDo {
 
+  public ToDo() {
+  }
+
+  @GeneratedValue(strategy = GenerationType.AUTO)
   @Id
   private long id;
   private String title;
@@ -13,8 +19,7 @@ public class ToDo {
   private boolean done;
 
 
-public ToDo(long id, String title) {
-    this.id = id;
+public ToDo(String title) {
     this.title = title;
     this.urgent = false;
     this.done = false;
@@ -52,5 +57,8 @@ public ToDo(long id, String title) {
     this.done = done;
   }
 
-
+  @Override
+  public String toString() {
+    return title;
+  }
 }

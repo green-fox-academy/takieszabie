@@ -1,19 +1,16 @@
-<div th:if="${not #lists.isEmpty(accounts)}" xmlns:th="http://www.w3.org/1999/xhtml">
-    <h2>Counts List</h2>
-    <table class="table table-striped">
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Urgent?</th>
-            <th>Done?</th>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo Page</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>ToDos for today!</h1>
 
-        </tr>
-        <tr th:each="todo : ${todos}">
-            <td th:text="${account.id}"></td>
-            <td th:text="${account.title}"></td>
-            <td th:text="${account.urgent}"></td>
-            <td th:text="${account.done}"></td>
+<ul>
+    <li th:each="task:${todos}" th:text="${task}"></li>
+</ul>
 
-        </tr>
-    </table>
-</div>
+</body>
+</html>
