@@ -11,7 +11,7 @@
 <table class="table table-striped">
 
     <tr th:each="post : ${posts}">
-        <td th:text="${post.getRating}"></td>
+        <td th:text="${post.getRating()}"></td>
         <td th:text="${post.getTitle()}"></td>
     </tr>
 
