@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo Page</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Trending posts</h1>
+
+<table class="table table-striped">
+
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.getRating}"></td>
+        <td th:text="${post.getTitle()}"></td>
+    </tr>
+
+</body>
+</html>
