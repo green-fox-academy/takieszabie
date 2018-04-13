@@ -11,9 +11,12 @@
 <table class="table table-striped">
 
     <tr th:each="post : ${posts}">
+        <td th:text="'+ - ='"></td>
         <td th:text="${post.getRating()}"></td>
-        <td th:text="${post.getTitle()}"></td>
+        <td><a th:href="${post.getUrl()}" th:text ="${post.getTitle()}"></a></td>
     </tr>
+
+</table>
 
 </body>
 </html>

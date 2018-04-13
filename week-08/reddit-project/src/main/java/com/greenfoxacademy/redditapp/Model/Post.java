@@ -1,11 +1,14 @@
 package com.greenfoxacademy.redditapp.Model;
 
+import org.springframework.stereotype.Service;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Service
 public class Post {
 
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,13 +16,23 @@ public class Post {
   private long id;
   private int rating;
   private String title;
+  private String url;
 
   public Post() {
   }
 
-  public Post(String title) {
+  public Post(String title, String url) {
     this.rating = 0;
     this.title = title;
+    this.url = url;
+  }
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
   }
 
   public int getRating() {

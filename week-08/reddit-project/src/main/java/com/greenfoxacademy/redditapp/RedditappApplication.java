@@ -19,9 +19,6 @@ public class RedditappApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		postRepository.save(new Post("How to sell yourself on LNKD"));
-		postRepository.save(new Post("How to sell yourself on LNKD2"));
-		postRepository.save(new Post("How to sell yourself on LNKD3"));
 
 	}
 }
