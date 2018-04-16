@@ -1,4 +1,4 @@
-package com.greenfoxacademy.frontend.Controllers;
+package com.greenfoxacademy.frontend.Models;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

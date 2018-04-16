@@ -1,13 +1,17 @@
 package com.greenfoxacademy.frontend.Controllers;
 
+import com.greenfoxacademy.frontend.Models.Appended;
 import com.greenfoxacademy.frontend.Models.DouledResponse;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.greenfoxacademy.frontend.Models.Greeting;
+import com.greenfoxacademy.frontend.Models.Operation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class OtherController {
+
+  @Autowired
+  OperationService operationService;
 
   @GetMapping("/doubling")
   public DouledResponse doubler(@RequestParam(name = "input", required = false) Integer input){
@@ -30,5 +34,16 @@ public class OtherController {
   @GetMapping("/appenda/{appendable}")
   public Appended appended(@PathVariable(name = "appendable") String appendable){
     return new Appended(appendable);
+  }
+
+  @PostMapping("/dountil/{what}")
+  public Operation operation(@PathVariable String what, @RequestBody(required = false) Operation operate ){
+    if (operate == null){
+      return new Operation();
+    } else if(what.equals("sum")) {
+      return OperationService.sum(operate.getUntil());
+    } else {
+      return OperationService.factor(operate.getUntil());
+    }
   }
 }
