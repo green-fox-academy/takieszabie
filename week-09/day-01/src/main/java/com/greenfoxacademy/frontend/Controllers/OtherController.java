@@ -2,6 +2,7 @@ package com.greenfoxacademy.frontend.Controllers;
 
 import com.greenfoxacademy.frontend.Models.DouledResponse;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,5 +25,10 @@ public class OtherController {
     } else {
       return new Greeting(name, title);
     }
+  }
+
+  @GetMapping("/appenda/{appendable}")
+  public Appended appended(@PathVariable(name = "appendable") String appendable){
+    return new Appended(appendable);
   }
 }
