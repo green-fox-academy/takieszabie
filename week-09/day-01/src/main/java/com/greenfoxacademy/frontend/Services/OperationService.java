@@ -1,4 +1,4 @@
-package com.greenfoxacademy.frontend.Controllers;
+package com.greenfoxacademy.frontend.Services;
 
 import com.greenfoxacademy.frontend.Models.Operation;
 import org.springframework.stereotype.Component;
