@@ -33,4 +33,40 @@ public class OtherControllerTest {
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.result").value(10));
   }
+  @Test
+  public void greeterTest() throws Exception {
+    mockMvc
+            .perform(get("/greeter?name=Petike&title=student")
+                    .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.welcome_message").value("Oh, hi there Petike, my dear student!"));
+  }
+  @Test
+  public void appenderTest() throws Exception {
+    mockMvc
+            .perform(get("/appenda/kuty")
+                    .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.appended").value("kutya"));
+  }
+
+  @Test
+  public void doUntilSumTest() throws Exception {
+    mockMvc
+            .perform(post("/dountil/sum")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content("{\"until\": 5}"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.result").value(15));
+  }
+
+  @Test
+  public void doUntilFactTest() throws Exception {
+    mockMvc
+            .perform(post("/dountil/factor")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content("{\"until\": 5}"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.result").value(120));
+  }
 }
