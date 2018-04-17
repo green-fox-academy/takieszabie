@@ -46,7 +46,7 @@ public class GuardianControllerTest {
   }
 
   @Test
-  public void testUnsuccessfulSignUp() throws Exception {
+  public void testValidMessage() throws Exception {
     mockMvc
             .perform(get("/groot")
                     .param("message", "kabbe"))
@@ -54,5 +54,14 @@ public class GuardianControllerTest {
             .andExpect(content().contentType(contentType))
             .andExpect(jsonPath("$.received", is("kabbe")))
             .andExpect(jsonPath("$.translated", is("I am Groot!")));
+  }
+
+  @Test
+  public void testNoMessage() throws Exception {
+    mockMvc
+            .perform(get("/groot"))
+            .andExpect(status().isBadRequest())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.error", is("I am Groot!")));
   }
 }
