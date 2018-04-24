@@ -2,6 +2,7 @@
 Szabolcs Takacs alias takieszabie
 # Hello!
 ## My Repos:
+- [Event register App](https://github.com/takieszabie/event-register)
 - [P2P Chat App](https://github.com/takieszabie/p2p-chat)
 - [Hello-World](https://github.com/takieszabie/hello-world.git)
 - [Patchwork](https://github.com/takieszabie/patchwork.git)
